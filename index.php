@@ -1,13 +1,14 @@
 <?php
 
-$añosmenoresa1989 = ' ';
-$añosmayoresa2020 = ' ';
-$añosmenoresa1816 = ' ';
-$añosmayoresa1778 = ' ';
-
 if(!isset($_GET['año1']) || !isset($_GET['año2']) || !isset($_GET['año3']) || !isset($_GET['año4']) || !isset($_GET['año5'])){
     echo 'Debe indicar todos los años, del 1 al 5';
 }else{
+//"variables para concatenar
+    $añosmenoresa1989 = ' ';
+    $añosmayoresa2020 = ' ';
+    $añosmenoresa1816 = ' ';
+    $añosmayoresa1778 = ' ';
+//variables
     $año1 = $_GET['año1'];
     $año2 = $_GET['año2'];
     $año3 = $_GET['año3'];
@@ -77,8 +78,6 @@ if($año4 > 1778){
 if($año5 > 1778){
     $añosmayoresa1778 = $añosmayoresa1778 . $año5 . '. ';
 }
-}
-
 echo 'Los años menores al año de la  caída del muro de Berlín son: ' . $añosmenoresa1989;
 echo '<br>';
 echo 'Los años mayores al año de inicio de la pandemia por COVID son: ' . $añosmayoresa2020;
@@ -86,3 +85,5 @@ echo '<br>';
 echo 'Los años menores al año de independencia de Argentina son: ' . $añosmenoresa1816;
 echo '<br>';
 echo 'Los años mayores al año en que nació El general San Martin son: ' . $añosmayoresa1778;
+}
+
